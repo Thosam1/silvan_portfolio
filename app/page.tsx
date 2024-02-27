@@ -15,7 +15,6 @@ export default Home
 
 const Hero = () => (
 	<div className="min-h-screen flex items-center justify-center px-6">
-		{/* Event */}
 		<div className="max-w-[75rem] lg:px-8 mx-auto">
 			<div className="sm:flex sm:items-center md:grid md:grid-cols-2 md:items-center md:gap-12 xl:gap-32">
 				<div className="mt-5 sm:mt-10 lg:mt-0">
@@ -31,7 +30,7 @@ const Hero = () => (
 						</div>
 
 						<div className="flex justify-start pb-10">
-							<Link href="/" style={{ marginRight: '16px' }}>
+							<Link href="/work" style={{ marginRight: '16px' }}>
 								<button type="button"
 										className="py-2 px-2 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-500 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
 									My works
@@ -103,6 +102,14 @@ const Education = () => (
 							August 2023 - Now
 						</h1>
 					</div>
+					{/*<div className="md:hidden block">*/}
+					{/*	<h1 className="font-medium text-xl py-2">*/}
+					{/*		Maitres du monde*/}
+					{/*	</h1>*/}
+					{/*	<h1 className="font-medium text-xl">*/}
+					{/*		August 2023 - Now*/}
+					{/*	</h1>*/}
+					{/*</div>*/}
 					<p className="mt-2 text-lg text-gray-400 py-2">
 						Going there to get my art degree
 					</p>
@@ -116,6 +123,14 @@ const Education = () => (
 							August 2023 - Now
 						</h1>
 					</div>
+					{/*<div className="hidden sm:block">*/}
+					{/*	<h1 className="font-medium text-xl py-2">*/}
+					{/*		École-Nouvelle*/}
+					{/*	</h1>*/}
+					{/*	<h1 className="font-medium text-xl">*/}
+					{/*		August 2023 - Now*/}
+					{/*	</h1>*/}
+					{/*</div>*/}
 					<p className="mt-2 text-lg text-gray-400 py-2">
 						Went to school and obtained my IB diploma there.
 					</p>
@@ -136,7 +151,7 @@ const Skills = () => (
 						Skills
 					</h1>
 
-					<div className="grid grid-cols-2">
+					<div className="grid grid-cols-1 sm:grid-cols-2">
 						<p className="mt-2 text-lg text-gray-400 py-2">
 							• 2D art
 						</p>
@@ -173,7 +188,7 @@ const Languages = () => (
 						Languages
 					</h1>
 
-					<div className="grid grid-cols-2">
+					<div className="grid grid-cols-1 sm:grid-cols-2">
 						<p className="mt-2 text-lg text-gray-400 py-2">
 							• French (native)
 						</p>
@@ -198,7 +213,6 @@ const ContactMe = () => (
 		<div className="items-center flex flex-wrap">
 			<div className="w-full lg:w-2/3 px-4 ml-auto mr-auto text-left">
 				<div>
-
 					<h1 className="font-semibold text-2xl">
 						About Me
 					</h1>
