@@ -194,7 +194,10 @@ const config: Config = {
       '6xl': '72rem',
       '7xl': '80rem',
     },
-    container: {},
+    container: {
+      center: true,
+      padding: '1.5rem'
+    },
     content: {
       none: 'none',
     },
