@@ -1,21 +1,22 @@
 /* will be rendered on every page, except when we override it */
 
-const title = "Thösam Norlha-Tsang"
-const description = "A Personal Website for blog articles - portfolio - coding"
+const title = "Silvan Schürmann"
+const description = "A personal website to showcase my work"
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
     title,
     description,
-    canonical: 'https://thosam.vercel.app/',
+    canonical: process.env.WEBSITE_URL,
     openGraph: {
         type: 'website',
         locale: 'en_IE',
-        url: 'https://thosam.vercel.app/',
-        site_name: 'Thösam Norlha-Tsang',
+        url: process.env.WEBSITE_URL,
+        site_name: 'Silvan Schürmann',
         title,
         description,
         images: [
             {
-                url: 'https://thosam.vercel.app/images/website_thumbnail.png',
+                url: process.env.WEBSITE_URL + '/public/website_thumbnail.jpg',
                 alt: title
             }
         ]

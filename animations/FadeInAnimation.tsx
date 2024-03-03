@@ -8,7 +8,7 @@ export const FadeInAnimation = ({children}: { children: ReactNode }) => {
             initial="hidden"
             whileInView="visible"
             viewport={{once: true}}
-            transition={{duration: 1.0, ease: "anticipate"}}
+            transition={{duration: 0.8, ease: "anticipate"}}
             variants={{
                 visible: {opacity: 1, scale: 1},
                 hidden: {opacity: 0, scale: 1},

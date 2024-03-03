@@ -1,14 +1,34 @@
 import {Divider} from '@/components/Divider'
 import Image from 'next/image'
-import Link from 'next/link'
 import GalleryElement from '@/components/GalleryElement';
-import {GALLERY_ELEMENTS} from '@/constants';
+import {FULL_NAME, GALLERY_ELEMENTS} from '@/constants';
 import {Wrapper} from "@/components/Wrapper.ts";
 import FadeInAnimation from "@/animations/FadeInAnimation";
+
+// SEO
+import {NextSeo} from "next-seo";
+
+const url = process.env.WEBSITE_URL + "/work";
+const title = "Work - " + FULL_NAME;
+const description = "Here I showcase my work !";
+
+// overriding SEO
+const SEO = {
+    title,
+    description,
+    canonical: url,
+
+    openGraph: {
+        title,
+        description,
+        url,
+    },
+};
 
 export default function Work() {
     return (
         <>
+            <NextSeo {...SEO} />
             <Heading/>
             <Divider/>
             <Gallery/>
@@ -39,8 +59,8 @@ const Gallery = () => (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-2">
                 {
                     GALLERY_ELEMENTS.map((item, index) =>
-                        <FadeInAnimation>
-                            <GalleryElement props={item} key={index}/>
+                        <FadeInAnimation key={index}>
+                            <GalleryElement props={item}/>
                         </FadeInAnimation>
                     )
                 }

@@ -3,11 +3,13 @@ import {EDUCATION, EMAIL, LANGUAGES, SKILLS} from '@/constants'
 import Link from 'next/link'
 import {Wrapper} from "@/components/Wrapper.ts";
 import FadeInAnimation from "@/animations/FadeInAnimation";
-import {motion} from "framer-motion";
 import ZoomIntroAnimation from "@/animations/ZoomIntroAnimation";
+import {DefaultSeo} from "next-seo";
+import SEO from "../next-seo.config";
 
 const Home = () => (
     <main>
+        <DefaultSeo {...SEO}/>
         <Hero/>
         <AboutMe/>
         <Education/>
@@ -42,7 +44,6 @@ const Hero = () => (
                                         My works
                                     </button>
                                 </Link>
-
                                 <Link href={`mailto:${EMAIL}`}>
                                     <button type="button"
                                             className="py-2 px-2 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-500 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
@@ -50,7 +51,6 @@ const Hero = () => (
                                     </button>
                                 </Link>
                             </div>
-
                         </div>
                     </div>
 
@@ -100,9 +100,9 @@ const Education = () => (
         <div className="flex flex-row">
             <div className="min-w-[3rem] md:hidden"/>
             <div className="flex-grow">
-                <FadeInAnimation>
-                    {EDUCATION.map((elt) =>
-                        <div className="py-2" key={elt.title}>
+                {EDUCATION.map((elt) =>
+                    <FadeInAnimation key={elt.title}>
+                        <div className="py-2">
                             <div className="md:hidden">
                                 <h1 className="font-medium text-xl py-2">
                                     {elt.title}
@@ -123,9 +123,8 @@ const Education = () => (
                                 {elt.description}
                             </p>
                         </div>
-                    )}
-                </FadeInAnimation>
-
+                    </FadeInAnimation>
+                )}
             </div>
         </div>
     </Wrapper>
@@ -143,13 +142,13 @@ const Skills = () => (
                 <div className="min-w-[3rem] md:hidden"/>
                 <div className="flex-grow">
                     <div className="grid grid-cols-1 sm:grid-cols-2">
-                        <FadeInAnimation>
-                            {SKILLS.map((elt) =>
-                                <p className="mt-2 text-lg text-gray-400 py-2" key={elt.title}>
+                        {SKILLS.map((elt) =>
+                            <FadeInAnimation key={elt.title}>
+                                <p className="mt-2 text-lg text-gray-400 py-2">
                                     • {elt.title}
                                 </p>
-                            )}
-                        </FadeInAnimation>
+                            </FadeInAnimation>
+                        )}
                     </div>
                 </div>
             </div>
@@ -169,13 +168,13 @@ const Languages = () => (
                 <div className="min-w-[3rem] md:hidden"/>
                 <div className="flex-grow">
                     <div className="grid grid-cols-1 sm:grid-cols-2">
-                        <FadeInAnimation>
-                            {LANGUAGES.map((elt) =>
-                                <p className="mt-2 text-lg text-gray-400 py-2" key={elt.title}>
+                        {LANGUAGES.map((elt) =>
+                            <FadeInAnimation key={elt.title}>
+                                <p className="mt-2 text-lg text-gray-400 py-2">
                                     • {elt.title} ({elt.level})
                                 </p>
-                            )}
-                        </FadeInAnimation>
+                            </FadeInAnimation>
+                        )}
                     </div>
                 </div>
             </div>
