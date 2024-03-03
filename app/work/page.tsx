@@ -7,8 +7,8 @@ import FadeInAnimation from "@/animations/FadeInAnimation";
 import type {Metadata} from "next";
 
 const url = process.env.WEBSITE_URL + "/work";
-const title = "My work";
-const description = "Here I showcase my work :)";
+const title = "My work | Silvan Schürmann";
+const description = "Here is the page where I showcase my work 😄";
 export const metadata: Metadata = {
     title,
     description,

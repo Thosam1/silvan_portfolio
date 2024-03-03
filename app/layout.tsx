@@ -9,8 +9,8 @@ import {FULL_NAME} from "@/constants";
 const inter = Inter({subsets: ['latin']})
 
 /* Default SEO */
-const title = "Silvan Schürmann"
-const description = "A personal website to showcase my work"
+const title = "Home | Silvan Schürmann"
+const description = "Hello there 👋, this is my personal website where I showcase my work 😄"
 export const metadata: Metadata = {
     title,
     description,
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
         description,
         images: [
             {
-                url: process.env.WEBSITE_URL + '/public/website_thumbnail.jpg',
+                url: process.env.WEBSITE_URL + '/website_thumbnail.jpg',
                 alt: title
             }
         ]
