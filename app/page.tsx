@@ -4,12 +4,10 @@ import Link from 'next/link'
 import {Wrapper} from "@/components/Wrapper.ts";
 import FadeInAnimation from "@/animations/FadeInAnimation";
 import ZoomIntroAnimation from "@/animations/ZoomIntroAnimation";
-import SEO from "../next-seo.config";
-import {NextSeo} from "next-seo";
 
 const Home = () => (
     <main>
-        <NextSeo {...SEO}/>
+        {/*<NextSeo {...SEO}/>*/}
         <Hero/>
         <AboutMe/>
         <Education/>

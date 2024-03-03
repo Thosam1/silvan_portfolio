@@ -4,6 +4,23 @@ import GalleryElement from '@/components/GalleryElement';
 import {FULL_NAME, GALLERY_ELEMENTS} from '@/constants';
 import {Wrapper} from "@/components/Wrapper.ts";
 import FadeInAnimation from "@/animations/FadeInAnimation";
+import type {Metadata} from "next";
+
+const url = process.env.WEBSITE_URL + "/work";
+const title = "My work";
+const description = "Here I showcase my work :)";
+export const metadata: Metadata = {
+    title,
+    description,
+    alternates: {
+        canonical: url,
+    },
+    openGraph: {
+        title,
+        description,
+        url: url,
+    }
+}
 
 export default function Work() {
     return (
