@@ -4,7 +4,6 @@ import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import PrelineScript from './PrelineScript'
-import {Head} from "next/document";
 
 const inter = Inter({subsets: ['latin']})
 
@@ -20,9 +19,6 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-        <Head>
-            <meta name="google-site-verification" content="-NttIeCsNFX7bi_Rj6onoCpyFICL51IJWnNl0mwkE2U"/>
-        </Head>
         <body>
         <Navbar/>
         <main>
