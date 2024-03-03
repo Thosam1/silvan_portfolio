@@ -41,6 +41,64 @@ export const GALLERY_ELEMENTS = [
 	}
 ]
 
+export const EDUCATION = [
+	{
+		title: "Maîtres du Monde",
+		date_start: "August 2023",
+		date_end: "Now",
+		description: "Going there to get my art degree"
+	},
+	{
+		title: "Ecole Nouvelle",
+		date_start: "August 2014",
+		date_end: "July 2023",
+		description: "Went to school and obtained my IB diploma there"
+	},
+]
+
+export const SKILLS = [
+	{
+		title: "2D art",
+	},
+	{
+		title: "3D art",
+	},
+	{
+		title: "Canva",
+	},
+	{
+		title: "Logo design",
+	},
+	{
+		title: "Portraits",
+	},
+	{
+		title: "Adobe Photoshop",
+	},
+	{
+		title: "Sketching",
+	},
+]
+
+export const LANGUAGES = [
+	{
+		title: "French",
+		level: "native"
+	},
+	{
+		title: "English",
+		level: "fluent"
+	},
+	{
+		title: "German",
+		level: "fluent"
+	},
+	{
+		title: "SwissGerman",
+		level: "native"
+	},
+]
+
 
 // Team
 export const BOARD = [
