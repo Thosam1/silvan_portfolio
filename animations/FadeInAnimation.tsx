@@ -1,10 +1,8 @@
-
 "use client";
 import {motion} from "framer-motion";
 import {ReactNode} from "react";
 
-// wrapper for fade in animation
-export const FadeInWrapper = ({children}: { children: ReactNode }) => {
+export const FadeInAnimation = ({children}: { children: ReactNode }) => {
     return (
         <motion.div
             initial="hidden"
@@ -21,4 +19,4 @@ export const FadeInWrapper = ({children}: { children: ReactNode }) => {
     );
 };
 
-export default FadeInWrapper;
+export default FadeInAnimation;

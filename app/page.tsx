@@ -2,8 +2,9 @@
 import {EDUCATION, EMAIL, LANGUAGES, SKILLS} from '@/constants'
 import Link from 'next/link'
 import {Wrapper} from "@/components/Wrapper.ts";
-import FadeInWrapper from "@/components/FadeInWrapper";
+import FadeInAnimation from "@/animations/FadeInAnimation";
 import {motion} from "framer-motion";
+import ZoomIntroAnimation from "@/animations/ZoomIntroAnimation";
 
 const Home = () => (
     <main>
@@ -18,11 +19,7 @@ const Home = () => (
 export default Home
 
 const Hero = () => (
-    <motion.div
-        initial={{opacity: 0, scale: 0.5}}
-        animate={{opacity: 1, scale: 1.0}}
-        transition={{duration: 2.0, ease: "anticipate"}}
-    >
+    <ZoomIntroAnimation>
         <div className="min-h-screen flex items-center justify-center px-8">
             <div className="max-w-[75rem] lg:px-8 mx-auto">
                 <div className="sm:flex sm:items-center md:grid md:grid-cols-2 md:items-center md:gap-12 xl:gap-32">
@@ -64,17 +61,17 @@ const Hero = () => (
                 </div>
             </div>
         </div>
-    </motion.div>
+    </ZoomIntroAnimation>
 )
 
 const AboutMe = () => (
     <Wrapper>
-        <FadeInWrapper>
+        <FadeInAnimation>
             <h1 className="font-semibold text-2xl">
                 About Me
             </h1>
-        </FadeInWrapper>
-        <FadeInWrapper>
+        </FadeInAnimation>
+        <FadeInAnimation>
             <p className="mt-2 text-lg text-gray-400 py-2">
                 I am a passionate artist that has grew up here in Switzerland. I speak fluently
                 Swiss-German, English and French !!!
@@ -88,22 +85,22 @@ const AboutMe = () => (
                 tortor vitae purus. Morbi blandit cursus risus at ultrices mi tempus imperdiet. Nulla
                 aliquet enim tortor at.
             </p>
-        </FadeInWrapper>
+        </FadeInAnimation>
     </Wrapper>
 )
 
 const Education = () => (
     <Wrapper>
-        <FadeInWrapper>
+        <FadeInAnimation>
             <h1 className="font-semibold text-2xl py-4">
                 Education
             </h1>
-        </FadeInWrapper>
+        </FadeInAnimation>
 
         <div className="flex flex-row">
             <div className="min-w-[3rem] md:hidden"/>
             <div className="flex-grow">
-                <FadeInWrapper>
+                <FadeInAnimation>
                     {EDUCATION.map((elt) =>
                         <div className="py-2" key={elt.title}>
                             <div className="md:hidden">
@@ -127,7 +124,7 @@ const Education = () => (
                             </p>
                         </div>
                     )}
-                </FadeInWrapper>
+                </FadeInAnimation>
 
             </div>
         </div>
@@ -137,22 +134,22 @@ const Education = () => (
 const Skills = () => (
     <Wrapper>
         <div>
-            <FadeInWrapper>
+            <FadeInAnimation>
                 <h1 className="font-semibold text-2xl">
                     Skills
                 </h1>
-            </FadeInWrapper>
+            </FadeInAnimation>
             <div className="flex flex-row">
                 <div className="min-w-[3rem] md:hidden"/>
                 <div className="flex-grow">
                     <div className="grid grid-cols-1 sm:grid-cols-2">
-                        <FadeInWrapper>
+                        <FadeInAnimation>
                             {SKILLS.map((elt) =>
                                 <p className="mt-2 text-lg text-gray-400 py-2" key={elt.title}>
                                     • {elt.title}
                                 </p>
                             )}
-                        </FadeInWrapper>
+                        </FadeInAnimation>
                     </div>
                 </div>
             </div>
@@ -163,22 +160,22 @@ const Skills = () => (
 const Languages = () => (
     <Wrapper>
         <div>
-            <FadeInWrapper>
+            <FadeInAnimation>
                 <h1 className="font-semibold text-2xl">
                     Languages
                 </h1>
-            </FadeInWrapper>
+            </FadeInAnimation>
             <div className="flex flex-row">
                 <div className="min-w-[3rem] md:hidden"/>
                 <div className="flex-grow">
                     <div className="grid grid-cols-1 sm:grid-cols-2">
-                        <FadeInWrapper>
+                        <FadeInAnimation>
                             {LANGUAGES.map((elt) =>
                                 <p className="mt-2 text-lg text-gray-400 py-2" key={elt.title}>
                                     • {elt.title} ({elt.level})
                                 </p>
                             )}
-                        </FadeInWrapper>
+                        </FadeInAnimation>
                     </div>
                 </div>
             </div>
@@ -189,12 +186,12 @@ const Languages = () => (
 const ContactMe = () => (
     <Wrapper>
         <div>
-            <FadeInWrapper>
+            <FadeInAnimation>
                 <h1 className="font-semibold text-2xl">
                     About Me
                 </h1>
-            </FadeInWrapper>
-            <FadeInWrapper>
+            </FadeInAnimation>
+            <FadeInAnimation>
                 <p className="mt-2 text-lg text-gray-400 py-2">
                     <Link href={`mailto:${EMAIL}`}>
                         <button type="button"
@@ -203,7 +200,7 @@ const ContactMe = () => (
                         </button>
                     </Link>
                 </p>
-            </FadeInWrapper>
+            </FadeInAnimation>
         </div>
     </Wrapper>
 )

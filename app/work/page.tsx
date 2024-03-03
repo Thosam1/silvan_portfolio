@@ -4,7 +4,7 @@ import Link from 'next/link'
 import GalleryElement from '@/components/GalleryElement';
 import {GALLERY_ELEMENTS} from '@/constants';
 import {Wrapper} from "@/components/Wrapper.ts";
-import FadeInWrapper from "@/components/FadeInWrapper";
+import FadeInAnimation from "@/animations/FadeInAnimation";
 
 export default function Work() {
     return (
@@ -39,9 +39,9 @@ const Gallery = () => (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-2">
                 {
                     GALLERY_ELEMENTS.map((item, index) =>
-                        <FadeInWrapper>
+                        <FadeInAnimation>
                             <GalleryElement props={item} key={index}/>
-                        </FadeInWrapper>
+                        </FadeInAnimation>
                     )
                 }
             </div>
